@@ -11,8 +11,7 @@ using namespace std;
 const int INF = 1e18;
  
 signed main() {
-    ios::sync_with_stdio(false);
-    cin.tie(0);
+    faster;
     int n, k;
     string s;
     cin >> k >> s;

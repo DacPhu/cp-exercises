@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
  
-#define faster ios::sync_with_stdio(false); cin.tie(0); cout.tie(0);
+#define faster ios_base::sync_with_stdio(false); cin.tie(0); cout.tie(0);
 #define int long long
 
 using namespace std;

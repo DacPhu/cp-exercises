@@ -31,3 +31,23 @@ int32_t main(){
         }
     cout << n - dp[n][n];
 }
+
+#include<bits/stdc++.h>
+using namespace std;
+#define int long long
+#define fr(i,a,b) for(int i=a;i<=b;i++)
+#define fast ios_base::sync_with_stdio(0); cout.tie(0); cin.tie(0);
+const int maxn=5e2 + 1;
+string a;
+int dp[maxn][maxn];
+signed main(){
+    fast;
+    cin>>a;
+    fr(i,0,a.size()-1) dp[i][i]=1;
+    fr(j,0,a.size()-1) for(int i=j;i>=0;i--)
+    {
+        if(a[i]==a[j]) dp[i][j]=dp[i+1][j-1];
+        else dp[i][j]=min(dp[i+1][j],dp[i][j-1]) + 1;
+    }
+    cout<<dp[0][a.size()-1];
+}

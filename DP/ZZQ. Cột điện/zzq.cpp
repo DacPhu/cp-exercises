@@ -8,7 +8,7 @@ const int inf = 1e18;
 const int N = 1e4 + 4;
  
 int n, c, h[N], Min;
-int dp[N][1003],Minu[1003],Mind[1003];
+int dp[N][1003], Minu[1003], Mind[1003];
  
 void in(){
     faster;
@@ -29,7 +29,7 @@ void getfirst(){
     for(int j = 1; j <= 1000; ++j)
         Minu[j] = min(Minu[j - 1], dp[1][j] - c * j);
     for(int j = 1000; j >= 1; --j)
-        Mind[j] = min(Mind[j + 1],dp[1][j] + c * j);
+        Mind[j] = min(Mind[j + 1], dp[1][j] + c * j);
 }
  
 void DP(){
